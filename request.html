@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <h1>CONTACT US</h1>
+    
+    <image src="assests/images/form-img.png" width="300" alt="thankyou_image"></image>
+    <br>
+    <p>
+        Your responses help us upload and recommend anime that matches our community’s preferences.
+    </p>
+    <form>
+        <label>Enter Name: </label><input type="text"><br><br>
+        <label>Enter Email: </label><input type="email"><br><br>
+        <label>Enter Password: </label><input type="password"><br><br>
+
+        <label>Select gender :</label>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+        <input type="radio" name="gender">Prefer not to say
+        <br><br>
+
+        <label>Choose Genre : </label>
+        <br>
+        <input type="checkbox"> Action
+        <br>
+        <input type="checkbox"> Adventure
+        <br>
+        <input type="checkbox"> Romance
+        <br>
+        <input type="checkbox"> Comedy
+        <br>
+        <input type="checkbox"> Horror
+        <br>
+        <input type="checkbox"> Science Fiction
+        <br><br>
+        <label>Choose no of episodes</label>
+        <select>
+            <option disabled selected>Select Episodes</option>
+            <option>12</option>
+            <option>12-48</option>
+            <option>48-96</option>
+            <option>96+</option>
+
+        </select>
+        <br><br>
+        <label>Languange preference </label>
+        <input type="radio" name="lang">Sub
+        <input type="radio" name="lang">Dub
+        <input type="radio" name="lang">Either
+        <br><br>
+        <label>Favourite Character type </label>
+        <select >
+            <option disabled selected>Select Character</option>
+            <option>OP Protagonist</option>
+            <option>Villian</option>
+            <option>Anti-Hero</option>
+            <option>Tsundere</option>
+            <option>Comic Relief</option>
+        </select>
+        <br><br>
+        <label>Feedback</label><br>
+        <textarea placeholder="Enter you feedback..."></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

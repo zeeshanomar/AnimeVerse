@@ -1,0 +1,20 @@
+.body{
+    background-color: beige;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(74, 16, 16);
+    text-align: justify;
+}
+
+.firstp{
+    background-color:rgb(218, 218, 175);
+}
+
+.heading{
+    font-family:cursive ;
+    color:brown;
+    font-size:xx-large;
+    font-weight:bolder;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+    
+}

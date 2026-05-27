@@ -64,20 +64,54 @@ a:visited {
 
 }
 
+.alin {
+    text-align: center;
+}
+
 .nav {
     border: 2px solid;
     box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
-    text-decoration: wavy;
-    display: inline-block;
-    padding:0.01%;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0.1%;
     letter-spacing: 2px;
     font-size: 20px;
+    margin: auto;
+    top: 1px;
+    background-color: beige;
+    position: sticky;
 }
-.nav ul{
-        display:flex
+
+.nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
 }
+
 .nav ul li {
     list-style: none;
     padding-left: 50px;
     padding-right: 50px;
+}
+
+
+
+.box {
+    width: 80vw;
+    height: 30vh;
+
+    border: 3px solid brown;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
+    font-size: 20px;
+    text-align: justify;
+
+    overflow: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+
 }

@@ -115,3 +115,27 @@ a:visited {
 
 
 }
+
+.flbox {
+    border: 2px solid brown;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    border-radius: 10px;
+    gap: 5px;
+    justify-content: flex-start;
+    background-color: beige;
+    box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
+    max-height: 350px;
+
+}
+
+.flbox p {
+    overflow: auto;
+}
+
+.frame {
+    padding: 10px;
+border-radius: 10px;
+}
+

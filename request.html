@@ -13,81 +13,94 @@
     <center>
         <h1 class="heading">CONTACT US</h1>
 
-        <image src="assests/images/form-img.png" width="300" alt="thankyou_image"></image>
+        <image class="img" src="assests/images/form-img.png" width="300" alt="thankyou_image"></image>
 
 
 
 
-        <br>    </center>
-        <nav class="nav">
+        <br>
+    </center>
+    <nav class="nav">
 
         <ul>
-           <li><a href="list.html">Anime List</a>&nbsp;&nbsp;</li>
-           <li><a href="index.html">Home Page</a>&nbsp;&nbsp;</li>
-           <li><a href="watch.html">Watch Anime</a>&nbsp;&nbsp;</li>
+            <li><a href="index.html">Home Page</a>&nbsp;&nbsp;</li>
+            <li><a href="list.html">Anime List</a>&nbsp;&nbsp;</li>
+            <li><a href="watch.html">Watch Anime</a>&nbsp;&nbsp;</li>
         </ul>
-        </nav>
+    </nav>
+    <br>
+    <div class="formpage">
+        <p class="watchpara">
+            Your responses help us upload and recommend anime that matches our community’s preferences.
+        </p>
+        <form class="form watchpara">
+            <div class="input">
+                <div>
+                    <label>Enter Name: </label><br>
+                    <label>Enter Email:</label><br>
+                    <label>Enter Password:</label><br>
+                </div>
+                <div>
+                    <input type="text" required placeholder="John Doe"><br>
+                    <input type="email" required placeholder="xyz123@gmail.com"><br>
+                    <input type="password" required placeholder="123@asd#"><br>
+                </div>
+            </div>
+            <label>Select gender :</label>
+            <label><input type="radio" name="gender" required>Male</label>
+            <label><input type="radio" name="gender" required>Female</label>
+            <label><input type="radio" name="gender" required>Prefer not to say</label>
+            <br><br>
 
+            <label>Choose Genre : </label>
+            <br>
+            <label><input type="checkbox"> Action</label>
+            <br>
+            <label><input type="checkbox"> Adventure</label>
+            <br>
+            <label><input type="checkbox"> Romance</label>
+            <br>
+            <label><input type="checkbox"> Comedy</label>
+            <br>
+            <label><input type="checkbox"> Horror</label>
+            <br>
+            <label><input type="checkbox"> Science Fiction</label>
+            <br><br>
+            <label>Choose no of episodes</label>
+            <select required>
+                <option disabled selected>Select Episodes</option>
+                <option>12</option>
+                <option>12-48</option>
+                <option>48-97</option>
+                <option>96+</option>
 
-    <p class="watchpara">
-        Your responses help us upload and recommend anime that matches our community’s preferences.
-    </p>
-    <form class="form">
-        <label>Enter Name: </label><input type="text" required><br><br>
-        <label>Enter Email: </label><input type="email" required><br><br>
-        <label>Enter Password: </label><input type="password" required><br><br>
-
-        <label>Select gender :</label>
-        <label><input type="radio" name="gender" required>Male</label>
-        <label><input type="radio" name="gender" required>Female</label>
-        <label><input type="radio" name="gender" required>Prefer not to say</label>
-        <br><br>
-
-        <label>Choose Genre : </label>
-        <br>
-        <label><input type="checkbox"> Action</label>
-        <br>
-        <label><input type="checkbox"> Adventure</label>
-        <br>
-        <label><input type="checkbox"> Romance</label>
-        <br>
-        <label><input type="checkbox"> Comedy</label>
-        <br>
-        <label><input type="checkbox"> Horror</label>
-        <br>
-        <label><input type="checkbox"> Science Fiction</label>
-        <br><br>
-        <label>Choose no of episodes</label>
-        <select required>
-            <option disabled selected>Select Episodes</option>
-            <option>12</option>
-            <option>12-48</option>
-            <option>48-97</option>
-            <option>96+</option>
-
-        </select>
-        <br><br>
-        <label>Languange preference </label>
-        <label><input type="radio" name="lang" required>Sub</label>
-        <label><input type="radio" name="lang" required>Dub</label>
-        <label><input type="radio" name="lang" required>Either</label>
-        <br><br>
-        <label>Favourite Character type </label>
-        <select required>
-            <option disabled selected>Select Character</option>
-            <option>OP Protagonist</option>
-            <option>Villian</option>
-            <option>Anti-Hero</option>
-            <option>Tsundere</option>
-            <option>Comic Relief</option>
-        </select>
-        <br><br>
-        <label>Feedback</label><br>
-        <textarea placeholder="Enter you feedback..."></textarea>
-        <br>
-        <button type="submit">Submit</button>
-    </form>
-    
+            </select>
+            <br><br>
+            <label>Languange preference </label>
+            <label><input type="radio" name="lang" required>Sub</label>
+            <label><input type="radio" name="lang" required>Dub</label>
+            <label><input type="radio" name="lang" required>Either</label>
+            <br><br>
+            <label>Favourite Character type </label>
+            <select required>
+                <option disabled selected>Select Character</option>
+                <option>OP Protagonist</option>
+                <option>Villian</option>
+                <option>Anti-Hero</option>
+                <option>Tsundere</option>
+                <option>Comic Relief</option>
+            </select>
+            <br><br>
+            <div class="feedback">
+                <label>Feedback</label>
+                <textarea placeholder="Enter you feedback..."></textarea>
+            </div>
+            <br>
+            <div class="center">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>

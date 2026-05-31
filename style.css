@@ -3,43 +3,11 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgb(74, 16, 16);
     text-align: justify;
-}
-
-* {
-
-
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
-.formpage {
-    background-color: rgb(218, 218, 175);
-    border: 2px solid;
-    box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
-    border-radius: 10px;
-    padding: 5px;
-   max-width: 50%;
-   margin: auto;
-}
-
-.input {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    white-space: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.firstp {
-    background-color: rgb(218, 218, 175);
-    border: 2px solid;
-    box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
-    border-radius: 10px;
-}
-
-.center {
-    text-align: center;
+    border: 5px solid brown;
+    padding: 2%;
+    margin: 0%;
+    box-shadow: inset 0px 0px 10px 3px rgb(101, 22, 22);
+    width: auto;
 }
 
 a:link {
@@ -62,7 +30,6 @@ a:visited {
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: black;
     text-shadow: 0px 5px 7px brown;
-
 }
 
 .watchhead {
@@ -74,11 +41,6 @@ a:visited {
     font-weight: 600;
     line-height: 160%;
     text-shadow: 0px 5px 15px brown;
-
-}
-
-.form {
-    font-size: 24px;
 }
 
 .watchpara {
@@ -86,7 +48,14 @@ a:visited {
     word-spacing: 1.5px;
     text-indent: 0%;
     font-size: 26px;
+}
 
+.form {
+    font-size: 24px;
+}
+
+.center {
+    text-align: center;
 }
 
 .alin {
@@ -111,9 +80,10 @@ a:visited {
 
 .nav ul {
     display: flex;
-    padding: 0;
-    margin: 0;
-
+    gap: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: auto;
 }
 
 .nav ul li {
@@ -122,31 +92,31 @@ a:visited {
     padding-right: 10px;
 }
 
+.firstp {
+    background-color: rgb(218, 218, 175);
+    border: 2px solid;
+    box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
+    border-radius: 10px;
+}
+
 .img {
     width: 600px;
     min-width: 268px;
-
     box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
     border-radius: 10px;
-
 }
-
 
 .box {
     width: 80vw;
     height: 30vh;
-
     border: 3px solid brown;
     border-radius: 10px;
     box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
     font-size: 20px;
     text-align: justify;
-
     overflow: auto;
     padding-left: 15px;
     padding-right: 15px;
-
-
 }
 
 .flbox {
@@ -158,11 +128,8 @@ a:visited {
     gap: 10px;
     justify-content: flex-start;
     background-color: beige;
-    box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
+    box-shadow: 0px 0px 10px 3px rgb(101, 22, 22);
     max-height: 350px;
-
-
-
 }
 
 .flbox p {
@@ -174,21 +141,155 @@ a:visited {
     border-radius: 10px;
 }
 
+.formpage {
+    background-color: rgb(218, 218, 175);
+    border: 2px solid;
+    box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 50%;
+    margin: auto;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    white-space: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.feedback {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.homecard {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+    max-width: 80vw;
+    margin: auto;
+}
+
+.cards img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+
+
+}
+
+.cards {
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
+}
+
+.cards:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.flcards:hover {
+    transform: scale(1.01);
+    transition: 0.3s;
+}
+
+.logo {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 100px;
+    z-index: 1000;
+
+    animation: logomove 8s ease-in-out infinite;
+
+
+}
+
+@keyframes logomove {
+    0% {
+        transform: translateX(130px);
+    }
+
+    10% {
+        transform: translateX(0px);
+    }
+
+    40% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(130px);
+    }
+
+    100% {
+        transform: translateX(130px);
+    }
+}
+
+.alert {
+    border: 10px solid red;
+    color: black;
+    font-size: 30px;
+
+}
+
+
+
 @media only screen and (max-width:768px) {
+    .homecard {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        max-width: 80vw;
+        margin: auto;
+    }
+
+    .cards {
+        padding: 5px;
+    }
+
+    .cards:hover {
+        transform: scale(1.02);
+    }
+
+    .flcards:hover {
+        transform: scale(0.99);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     .flbox {
         border: 2px solid brown;
-
         display: flex;
         border-radius: 10px;
         gap: 5px;
         justify-content: flex-start;
         background-color: beige;
-        box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
-
+        box-shadow: 0px 0px 10px 3px rgb(101, 22, 22);
         flex-direction: column;
-
-        width: 90vw;
-
+        width: 87vw;
         min-width: 268px;
     }
 
@@ -197,8 +298,8 @@ a:visited {
     }
 
     .frame {
-        padding: 10px;
         border-radius: 10px;
+        overflow: hidden;
     }
 
     .watchhead {
@@ -210,7 +311,6 @@ a:visited {
         font-weight: 600;
         line-height: 160%;
         text-shadow: 0px 5px 15px brown;
-
     }
 
     .watchpara {
@@ -218,7 +318,6 @@ a:visited {
         word-spacing: 1.5px;
         text-indent: 0%;
         font-size: 15px;
-
     }
 
     .nav {
@@ -248,13 +347,5 @@ a:visited {
         border-radius: 10px;
         padding: 5px;
         max-width: fit-content;
-
     }
-}
-
-.feedback {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
 }

@@ -1,0 +1,156 @@
+body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    border: 1px solid red;
+    box-shadow: inset 0px 0px 10px 4px rgb(101, 22, 22);
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    top: 0;
+    left: 0;
+}
+
+.bgvid {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    z-index: 1;
+    box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
+
+}
+
+.cen {
+    position: absolute;
+    top: 55px;
+    max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 3;
+}
+
+.heading {
+    font-family: cursive;
+    font-size: 50px;
+    color: antiquewhite;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 0px 0px 30px red;
+}
+
+.heading:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.firstp {
+    font-family: cursive;
+    font-size: 20px;
+    color: antiquewhite;
+    text-shadow: 0px 0px 9px red;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    height: 80vh;
+    width: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.nav {
+    position: absolute;
+    right: 5px;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav ul li {
+    list-style: none;
+    padding: 2px 6px;
+    z-index: 3;
+}
+
+.button {
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: 2px solid rgb(104, 14, 14);
+    border-radius: 5px;
+    font-family: cursive;
+    text-shadow: 0px 0px 9px red;
+}
+
+.logo {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 3;
+    width: 80px;
+    height: auto;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+.homecard {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+    max-width: 80vw;
+    margin: auto;
+}
+
+.cards img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cards {
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
+}
+
+.cards:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.content h3 {
+    color: red;
+}
+
+.content h4 {
+    color: white;
+    text-shadow: 0px 0px 4px red;
+}
+
+.content p {
+    color: white;
+    text-shadow: 0px 0px 4px red;
+
+}
+
+.button:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}

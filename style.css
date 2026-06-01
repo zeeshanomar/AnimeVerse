@@ -130,10 +130,15 @@ a:visited {
     background-color: beige;
     box-shadow: 0px 0px 10px 3px rgb(101, 22, 22);
     max-height: 350px;
+    transition: 0.3s;
 }
 
 .flbox p {
     overflow: auto;
+}
+
+.flcards:hover {
+    transform: scale(1.01);
 }
 
 .frame {
@@ -167,52 +172,13 @@ a:visited {
     gap: 10px;
 }
 
-.homecard {
-    padding-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-
-    max-width: 80vw;
-    margin: auto;
-}
-
-.cards img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 10px;
-
-
-}
-
-.cards {
-    border: 2px solid;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 1px 10px 3px rgb(101, 22, 22);
-}
-
-.cards:hover {
-    transform: scale(1.02);
-    transition: 0.3s;
-}
-
-.flcards:hover {
-    transform: scale(1.01);
-    transition: 0.3s;
-}
-
 .logo {
     position: fixed;
     top: 15px;
     right: 15px;
     width: 100px;
     z-index: 1000;
-
     animation: logomove 8s ease-in-out infinite;
-
-
 }
 
 @keyframes logomove {
@@ -241,44 +207,9 @@ a:visited {
     border: 10px solid red;
     color: black;
     font-size: 30px;
-
 }
 
-
-
 @media only screen and (max-width:768px) {
-    .homecard {
-        padding-top: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
-
-        max-width: 80vw;
-        margin: auto;
-    }
-
-    .cards {
-        padding: 5px;
-    }
-
-    .cards:hover {
-        transform: scale(1.02);
-    }
-
-    .flcards:hover {
-        transform: scale(0.99);
-    }
-
-
-
-
-
-
-
-
-
-
-
 
     .flbox {
         border: 2px solid brown;

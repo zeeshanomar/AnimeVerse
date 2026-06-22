@@ -25,7 +25,7 @@ body {
 
 .cen {
     position: absolute;
-    top: 55px;
+    top: 5px;
     max-width: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -34,6 +34,7 @@ body {
 }
 
 .heading {
+    padding-top: 10px;
     font-family: cursive;
     font-size: 50px;
     color: antiquewhite;
@@ -73,6 +74,11 @@ body {
 }
 
 .nav ul li {
+    list-style: none;
+    padding: 2px 6px;
+    z-index: 3;
+}
+.nav ul div {
     list-style: none;
     padding: 2px 6px;
     z-index: 3;
@@ -150,7 +156,11 @@ body {
 
 }
 
-.button:hover {
+.button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.tog:hover{
     transform: scale(1.1);
     transition: 0.3s;
 }
@@ -176,6 +186,7 @@ body {
 
     box-shadow: 0px 0px 10px 3px rgb(101, 22, 22);
 }
+
 .animemode:hover {
     transform: scale(1.1);
     transition: 0.3s;
@@ -186,7 +197,7 @@ body {
     justify-content: center;
     align-items: center;
     padding-top: 3px;
-    padding-bottom: 30px;
+    padding-bottom: 3px;
 }
 
 .animemodes {
@@ -202,7 +213,64 @@ body {
 
     box-shadow: 0px 0px 10px 3px rgb(101, 22, 22);
 }
+
 .animemodes:hover {
     transform: scale(1.1);
     transition: 0.3s;
 }
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.rec {
+    border: 2px solid darkred;
+    height: 40px;
+    background-color: rgb(218, 65, 65);
+    box-shadow: 0px 0px 10px red;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    border-radius: 10px;
+
+}
+
+.recbtn {
+    padding: 2px 6px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: 2px solid rgb(104, 14, 14);
+    border-radius: 5px;
+    font-family: cursive;
+    text-shadow: 0px 0px 9px red;
+}
+
+.recbtn:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.fav:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.fav {
+    padding: 2px 6px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: 2px solid rgb(104, 14, 14);
+    border-radius: 5px;
+    font-family: cursive;
+    text-shadow: 0px 0px 9px red;
+    align-self: center;
+}
+

@@ -85,7 +85,10 @@ a:visited {
     padding-right: 5px;
     margin: auto;
 }
-
+#counter{
+    font-size: 13px;
+    color: black;
+}
 .nav ul li {
     list-style: none;
     padding-left: 10px;

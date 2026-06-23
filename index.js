@@ -3,6 +3,23 @@ console.log("Initializing......")
 let btn = document.getElementsByClassName("animemode")[0];
 let heading = document.getElementsByClassName("heading")[0];
 
+
+window.addEventListener("load", () => {
+    let themename = localStorage.getItem("theme");
+    if (themename == "light") {
+        document.body.style.backgroundColor = "cyan";
+        toggle.textContent = "Dark Mode";
+        mode=false;
+    }
+    else if (themename == "dark") {
+        document.body.style.backgroundColor = "black";
+        toggle.textContent = "Light Mode";
+        mode=true;
+
+    }
+
+});
+
 btn.addEventListener("click", () => {
     btn.textContent = "ACTIVATED !!";
     heading.style.textShadow = "0px 0px 80px cyan";
@@ -134,8 +151,8 @@ let anime = [
     "Ranking of Kings"
 ];
 console.log("1");
-function getanime() { 
-    return (Math.floor( Math.random()*anime.length));
+function getanime() {
+    return (Math.floor(Math.random() * anime.length));
 }
 console.log("2");
 
@@ -151,36 +168,36 @@ recbtn.addEventListener("click", () => {
 
 
 
-let fav=document.querySelectorAll(".fav");
-let card=document.querySelectorAll(".cards");
+let fav = document.querySelectorAll(".fav");
+let card = document.querySelectorAll(".cards");
 
 fav.forEach((fav, index) => {
     console.log("5");
-    fav.addEventListener("click", ()=>{
+    fav.addEventListener("click", () => {
         console.log("6");
         //card[index].style.backgroundColor="red";
-        card[index].style.border="3px solid gold";
-        fav.textContent="Favourite Selected";
+        card[index].style.border = "3px solid gold";
+        fav.textContent = "Favourite Selected";
 
     })
 });
 
 
-let toggle=document.getElementsByClassName("toggle")[0];
+let toggle = document.getElementsByClassName("toggle")[0];
 
-let mode=true;
-toggle.addEventListener("click",()=>{
-    if(mode)
-    {
-        document.body.style.backgroundColor="cyan";
-        toggle.textContent="Dark Mode";
+let mode = true;
+toggle.addEventListener("click", () => {
+    if (mode) {
+        document.body.style.backgroundColor = "cyan";
+        toggle.textContent = "Dark Mode";
+        localStorage.setItem("theme", "light");
     }
-    else
-    {
-        document.body.style.backgroundColor="black";
-        toggle.textContent="Light Mode";
-        
+    else {
+        document.body.style.backgroundColor = "black";
+        toggle.textContent = "Light Mode";
+        localStorage.setItem("theme", "dark");
+
     }
 
-    mode= !mode;
+    mode = !mode;
 })

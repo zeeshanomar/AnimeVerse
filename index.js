@@ -9,17 +9,28 @@ window.addEventListener("load", () => {
     if (themename == "light") {
         document.body.style.backgroundColor = "cyan";
         toggle.textContent = "Dark Mode";
-        mode=false;
+        mode = false;
     }
     else if (themename == "dark") {
         document.body.style.backgroundColor = "black";
         toggle.textContent = "Light Mode";
-        mode=true;
+        mode = true;
+
+    }
+    let favarr = JSON.parse(localStorage.getItem("favv")) || [];
+    let animenames = document.getElementsByClassName("anime_name");
+
+    for (let i = 0; i < animenames.length; i++) {
+        for (let j = 0; j < favarr.length; j++) {
+            if (animenames[i].textContent == favarr[j]) {
+                card[i].style.border = "3px solid gold";
+                fav[i].textContent = "Favourite Selected";
+            }
+        }
 
     }
 
 });
-
 btn.addEventListener("click", () => {
     btn.textContent = "ACTIVATED !!";
     heading.style.textShadow = "0px 0px 80px cyan";
@@ -170,17 +181,48 @@ recbtn.addEventListener("click", () => {
 
 let fav = document.querySelectorAll(".fav");
 let card = document.querySelectorAll(".cards");
-
+let favarr = JSON.parse(localStorage.getItem("favv")) || [];
 fav.forEach((fav, index) => {
     console.log("5");
     fav.addEventListener("click", () => {
         console.log("6");
-        //card[index].style.backgroundColor="red";
         card[index].style.border = "3px solid gold";
         fav.textContent = "Favourite Selected";
-
+        favarr.push(document.getElementsByClassName("anime_name")[index].textContent);
+        localStorage.setItem("favv", JSON.stringify(favarr));
+        let naam = JSON.parse(localStorage.getItem("favv"));
+        console.log(naam);
     })
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 let toggle = document.getElementsByClassName("toggle")[0];
@@ -200,4 +242,5 @@ toggle.addEventListener("click", () => {
     }
 
     mode = !mode;
-})
+});
+

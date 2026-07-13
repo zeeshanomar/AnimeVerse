@@ -49,6 +49,7 @@ submit.addEventListener("click", (e) => {
     }
     console.log("Prevented from Refreshing");
     alert("Form submitted successfully");
+    
 
 });
 

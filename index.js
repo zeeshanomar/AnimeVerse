@@ -102,71 +102,82 @@ toggle.addEventListener("click", () => {
     mode = !mode;
 });
 
-let homecard = document.getElementsByClassName("homecard")[0];
-let favarr = JSON.parse(localStorage.getItem("favv")) || [];
-animelist.forEach((anime) => {
-    let section = document.createElement("section");
-    section.classList.add("cards");
-
-    const image = document.createElement("img");
-    image.src = "./assests/images/aot.jpg";
-
-    let div = document.createElement("div");
-    div.classList.add("content");
-
-    let title = document.createElement("h3");
-    title.textContent = anime.name;
-
-    let info = document.createElement("p");
-    info.textContent = anime.desc;
-
-    const btn = document.createElement("button");
-    btn.classList.add("fav");
-    btn.textContent = "Pick favourite";
-    btn.dataset.name = anime.name;
-
-    if (favarr.includes(anime.name)) {
-
-        section.style.border = "3px solid gold";
-
-        btn.textContent = "Favourite Selected";
-
-    } else {
-
-        btn.textContent = "Pick Favourite";
-
-    }
 
 
-    btn.addEventListener("click", () => {
 
-        if (!favarr.includes(anime.name)) {
+let searchbar = document.body.getElementsByClassName("searchbar")[0];
 
-            favarr.push(anime.name);
+searchbar.addEventListener("input", (event) => {
+    let inp = event.target.value.toLowerCase();
+    let homecard = document.getElementsByClassName("homecard")[0];
+    homecard.innerHTML = "";
 
-            localStorage.setItem(
-                "favv",
-                JSON.stringify(favarr)
-            );
+
+    const filtered = animelist.filter((anime) => {
+        return anime.name.toLowerCase().includes(inp);
+    })
+
+    let favarr = JSON.parse(localStorage.getItem("favv")) || [];
+    filtered.forEach((anime) => {
+        let section = document.createElement("section");
+        section.classList.add("cards");
+
+        const image = document.createElement("img");
+        image.src = "./assests/images/aot.jpg";
+
+        let div = document.createElement("div");
+        div.classList.add("content");
+
+        let title = document.createElement("h3");
+        title.textContent = anime.name;
+
+        let info = document.createElement("p");
+        info.textContent = anime.desc;
+
+        const btn = document.createElement("button");
+        btn.classList.add("fav");
+        btn.textContent = "Pick favourite";
+        btn.dataset.name = anime.name;
+
+        if (favarr.includes(anime.name)) {
 
             section.style.border = "3px solid gold";
+
             btn.textContent = "Favourite Selected";
 
-            console.log(favarr);
+        } else {
+
+            btn.textContent = "Pick Favourite";
 
         }
 
+
+        btn.addEventListener("click", () => {
+
+            if (!favarr.includes(anime.name)) {
+
+                favarr.push(anime.name);
+
+                localStorage.setItem(
+                    "favv",
+                    JSON.stringify(favarr)
+                );
+
+                section.style.border = "3px solid gold";
+                btn.textContent = "Favourite Selected";
+
+                console.log(favarr);
+
+            }
+
+        });
+
+        section.appendChild(image);
+        section.appendChild(div);
+        div.appendChild(title);
+        div.appendChild(info);
+        div.appendChild(btn);
+
+        homecard.appendChild(section);
     });
-
-    section.appendChild(image);
-    section.appendChild(div);
-    div.appendChild(title);
-    div.appendChild(info);
-    div.appendChild(btn);
-
-    homecard.appendChild(section);
-});
-
-
-
-
+})

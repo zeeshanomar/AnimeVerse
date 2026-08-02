@@ -1,26 +1,19 @@
-*{
+* {
     font-family: "Poppins", sans-serif;
 }
 
-.anime-card {
-    border: 5px solid black;
-    box-sizing: border-box;
-    width: 200px;
-    height: 200px;
-}
-
 .stats {
-    border: 5px solid black;
+    border: 1px solid rgb(52, 7, 76);
     box-sizing: border-box;
     width: 90%;
     height: 80px;
     margin-top: -40px;
     background-color: aliceblue;
-        border-radius: 10px;
+    border-radius: 10px;
 }
 
 .main-logo {
-    width: 140px;
+    width: 160px;
     height: auto;
     display: block;
 }
@@ -38,7 +31,7 @@
     border-radius: 10px;
 }
 
-.footer-headlines ul {
+footer ul {
     list-style: none;
 }
 
@@ -58,9 +51,11 @@
 .hero-content p {
     margin-top: 20px;
     margin-bottom: 30px;
-   
+    color: rgb(52, 7, 76);
+    font-size: 15px;
 }
-.hero-content{
+
+.hero-content {
     padding-top: 30px;
 }
 
@@ -69,14 +64,87 @@
     height: 25px;
     border-color: rgb(193, 218, 242);
     border-radius: 5px;
+    padding-left: 5px;
 }
 
 .search-btn {
-    background-color: rgb(145, 192, 237);
+    border-color: rgb(52, 7, 76);
+    background-color: rgb(236, 231, 240);
     border-radius: 5px;
     width: 65px;
 }
 
-.bluehead{
+.nav-btn {
+    border-radius: 5px;
+    width: fit-content;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-color: rgb(52, 7, 76);
+    background-color: rgb(236, 231, 240);
+}
+
+.bluehead {
     color: rgb(142, 64, 183);
+}
+
+.footer-headlines {
+    font-size: 14px;
+    padding-bottom: 5px;
+    color: rgb(52, 7, 76);
+    font-weight: 700;
+}
+
+.footer-logo {
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-top: 22px;
+    color: rgb(52, 7, 76);
+    font-weight: 700;
+}
+
+.footer-logo-text {
+    padding-left: 15px;
+    font-size: 12px;
+}
+
+.footer-text {
+    font-size: 12px;
+    padding: 2px;
+    color: rgb(52, 7, 76);
+}
+
+.anime-section {
+    padding-bottom: 20px;
+}
+
+.anime-section h2 {
+    padding-bottom: 10px;
+    color: rgb(52, 7, 76);
+}
+
+
+.anime-card {
+    border: 1px rgb(52, 7, 76)solid;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+}
+
+.card-image {
+    max-width: 300px;
+    max-height: 140px;
+    overflow: hidden;
+}
+
+.card-image img {
+    border-radius: 10px;
+    width: 100%;
+    height:60%;
+}
+
+.card-info {
+    padding-top: 8px;
+    padding-left:10px;
 }

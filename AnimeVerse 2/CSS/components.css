@@ -1,0 +1,82 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+.anime-card {
+    border: 5px solid black;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+}
+
+.stats {
+    border: 5px solid black;
+    box-sizing: border-box;
+    width: 90%;
+    height: 80px;
+    margin-top: -40px;
+    background-color: aliceblue;
+        border-radius: 10px;
+}
+
+.main-logo {
+    width: 140px;
+    height: auto;
+    display: block;
+}
+
+.profile-img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.footer-headlines ul {
+    list-style: none;
+}
+
+.hero {
+    background-color: rgb(193, 216, 240);
+    margin-bottom: 40px;
+    padding: 5px;
+    padding-left: 30px;
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+   
+}
+.hero-content{
+    padding-top: 30px;
+}
+
+.search-bar {
+    width: 250px;
+    height: 25px;
+    border-color: rgb(193, 218, 242);
+    border-radius: 5px;
+}
+
+.search-btn {
+    background-color: rgb(145, 192, 237);
+    border-radius: 5px;
+    width: 65px;
+}
+
+.bluehead{
+    color: rgb(142, 64, 183);
+}

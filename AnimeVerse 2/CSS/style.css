@@ -70,3 +70,17 @@ footer {
     column-gap: 10px;
 }
 
+.anime-card-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width:100%;
+
+}
+.popular-anime-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width:100%;
+
+}

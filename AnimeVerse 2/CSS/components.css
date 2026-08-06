@@ -187,12 +187,10 @@ footer ul {
 
 .anime-card-wrapper{
     overflow-x: scroll;
-    scrollbar-width: none;
     padding: 5px;
 }
 .popular-anime-wrapper{
     overflow-x: scroll;
-    scrollbar-width: none;
     padding: 5px;
 }
 
@@ -200,4 +198,31 @@ footer ul {
      transform: scale(1.03);
      
   
+}
+
+
+
+
+
+
+
+.anime-card-wrapper::-webkit-scrollbar,
+.popular-anime-wrapper::-webkit-scrollbar{
+    height: 8px;
+}
+
+.anime-card-wrapper::-webkit-scrollbar-track,
+.popular-anime-wrapper::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+.anime-card-wrapper::-webkit-scrollbar-thumb,
+.popular-anime-wrapper::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 10px;
+}
+
+.anime-card-wrapper::-webkit-scrollbar-thumb:hover,
+.popular-anime-wrapper::-webkit-scrollbar-thumb:hover{
+    background: #555;
 }

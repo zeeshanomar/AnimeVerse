@@ -16,7 +16,7 @@ async function getAnime(api) {
 
 
 
-function renderCards(animedata,container) {
+function renderCards(animedata, container) {
     const animecard = document.querySelector(container);
     animecard.replaceChildren();
     animedata.data.forEach((anime) => {
@@ -38,44 +38,64 @@ function renderCards(animedata,container) {
                                 <div class="year-box">
 
                                     <p class="calender">📅 </p>
-                                    <p class="rating">${anime.broadcast.day||anime.status}</p>
+                                    <p class="rating">${anime.broadcast.day || anime.status}</p>
                                 </div>
                                 <div class="fav-btn-box"><button class="fav-btn">🤍</button></div>
                             </div>
                         </div>
         </div>
                     `
-    animecard.innerHTML+=card;
+        animecard.innerHTML += card;
 
     });
 }
 
-document.querySelectorAll(".anime-card-wrapper, .popular-anime-wrapper")
-.forEach(wrapper => {
-    wrapper.addEventListener("wheel", (e) => {
-        e.preventDefault();
 
-        wrapper.scrollBy({
-            left: e.deltaY,
-            behavior: "smooth"
-        });
-    }, { passive: false });
-});
 
-const weekly_api="https://api.jikan.moe/v4/top/anime?filter=airing";
-const weekly_container=".anime-card-wrapper";
+const weekly_api = "https://api.jikan.moe/v4/top/anime?filter=airing";
+const weekly_container = ".anime-card-wrapper";
 
-const popular_api="https://api.jikan.moe/v4/top/anime?filter=bypopularity";
-const popular_container=".popular-anime-wrapper";
+const popular_api = "https://api.jikan.moe/v4/top/anime?filter=bypopularity";
+const popular_container = ".popular-anime-wrapper";
 
 async function datafetch() {
-    const weeklydata= await getAnime(weekly_api);
-    renderCards(weeklydata,weekly_container);
+    const weeklydata = await getAnime(weekly_api);
+    renderCards(weeklydata, weekly_container);
 
-    const populardata= await getAnime(popular_api);
-    renderCards(populardata,popular_container);
+    const populardata = await getAnime(popular_api);
+    renderCards(populardata, popular_container);
 }
 datafetch();
+
+
+const searchbar = document.querySelector(".search-bar");
+searchbar.addEventListener("input", async (event) => {
+    const query = event.target.value.trim().toLowerCase();
+    console.log(query);
+    if (query.length > 4) {
+        try {
+            const searchdata = await getAnime(
+                `https://kitsu.io/api/edge/anime?filter[text]=${query}`
+            );
+
+            searchdata.data.forEach((anime) => {
+                    console.log(anime.attributes.titles.en || anime.attributes.canonicalTitle);
+
+            });
+            return searchdata;
+        } catch (error) {
+            console.log("Search failed:", error.message);
+        }
+    }
+
+});
+
+
+
+
+
+
+
 
 
 
